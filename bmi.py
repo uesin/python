@@ -1,10 +1,14 @@
 #BmI判定プログラム
-weight = float(input("体重(kg)は？"))
-height = float(input("身長(cm)は？"))
-#bimの計算
-height = height / 100 #mに直す
-bmi = weight / (height * height)
-
+while True :  
+  try:
+    weight = float(input("体重(kg)は？"))
+    height = float(input("身長(cm)は？"))
+    #bimの計算
+    height = height / 100 #mに直す
+    bmi = weight / (height * height)
+    break;
+  except:
+    print("入力ミスがあります。")
 
 if bmi < 18.5:
     result = "痩せ型"
